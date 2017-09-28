@@ -14,9 +14,7 @@ if(program.args.length === 0){
 } else {
     const spinner = ora('Downloading template').start();
     let projName = program.args[0];
-    download("lubezhang/vue-hot-load-demo", `./${projName}`, (err) => {
-        // console.log(err ? `Err:${chalk.red(err)}` : `${chalk.green('success')}`);
-        // spinner.stop();
+    download("lubezhang/vue-webpack-template", `./${projName}`, (err) => {
         if(err) {
             spinner.fail(`${chalk.red(err)}`);
         } else {
