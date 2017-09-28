@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var ora = require('ora');
+var download = require('download-git-repo');
+var chalk = require('chalk')
+
+program.usage('[project-name]')
+
+program.parse(process.argv);
+
+if(program.args.length === 0){
+    program.help();
+} else {
+    const spinner = ora('Downloading template').start();
+    let projName = program.args[0];
+    download("lubezhang/vue-hot-load-demo", `./${projName}`, (err) => {
+        // console.log(err ? `Err:${chalk.red(err)}` : `${chalk.green('success')}`);
+        // spinner.stop();
+        if(err) {
+            spinner.fail(`${chalk.red(err)}`);
+        } else {
+            spinner.succeed("Success!!!");
+        }
+    })
+}

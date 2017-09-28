@@ -1,0 +1,20 @@
+{
+  "name": "vue-create-cli",
+  "version": "0.1.0",
+  "bin": {
+    "vue-create": "bin/vue-create",
+    "vue-create-init": "bin/vue-create-init",
+    "vue-create-list": "bin/vue-create-list"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "commander": "^2.11.0",
+    "download-git-repo": "^1.0.1",
+    "handlebars": "^4.0.10",
+    "ora": "^1.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.2"
+  }
+}
